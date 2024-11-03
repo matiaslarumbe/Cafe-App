@@ -96,7 +96,7 @@ export const assets = {
 export const productos = [
   {
     id: 1,
-    nombre: "Cafe paquete",
+    nombre: "Cafe Colombia",
     category: "cafe",
     imagen: cafe_paquete,
     precio: "8000",
@@ -104,6 +104,22 @@ export const productos = [
   },
   {
     id: 2,
+    nombre: "Cafe Brasil",
+    category: "cafe",
+    imagen: cafe_paquete,
+    precio: "8000",
+    disponibles: 20,
+  },
+  {
+    id: 3,
+    nombre: "Cafe Brasil Tostado",
+    category: "cafe",
+    imagen: cafe_paquete,
+    precio: "8000",
+    disponibles: 20,
+  },
+  {
+    id: 4,
     nombre: "Remera Cafe",
     category: "merceria",
     imagen: remeras,
@@ -111,7 +127,7 @@ export const productos = [
     disponibles: 20,
   },
   {
-    id: 3,
+    id: 5,
     nombre: "Taza cafe",
     category: "merceria",
     imagen: taza_cafe_venta,
@@ -119,7 +135,7 @@ export const productos = [
     disponibles: 20,
   },
   {
-    id: 4,
+    id: 6,
     nombre: "Cafetera Filtro",
     category: "equipo de cafe",
     imagen: cafetera_filtro,
@@ -127,7 +143,7 @@ export const productos = [
     disponibles: 20,
   },
   {
-    id: 5,
+    id: 7,
     nombre: "Aero Express",
     category: "equipo de cafe",
     imagen: aeropress,

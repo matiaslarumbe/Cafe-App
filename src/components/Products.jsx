@@ -15,7 +15,7 @@ const Products = () => {
           </h2>
           <div className="text-center mt-12">
             <Link
-              to="/menu"
+              to="/carrito"
               className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg hover:bg-opacity-90 transition-all"
             >
               Ver Más Productos

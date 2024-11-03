@@ -6,7 +6,7 @@ const TopNavbar = () => {
   return (
     <nav className="absolute top-8 left-0 right-0 z-40">
       <div className="container mx-auto px-4"> {/* Aumentado el padding horizontal */}
-        <div className="flex justify-between items-center max-w-[120vw] mx-auto bg-black bg-opacity-10 rounded-full py-4 px-10 border border-white border-opacity-70"> {/* Aumentado max-w y padding */}
+        <div className="flex justify-between items-center max-w-[120vw] mx-auto bg-black bg-opacity-10 rounded-full py-1 px-10 border border-white border-opacity-70"> {/* Aumentado max-w y padding */}
           {/* Enlaces izquierdos */}
           <div className="flex space-x-30 items-center"> {/* Aumentado el espacio entre enlaces */}
             <Link 

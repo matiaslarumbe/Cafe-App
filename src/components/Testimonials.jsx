@@ -8,7 +8,7 @@ const Testimonials = () => {
         {/* Encabezado */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-light mb-6">
-          Nuestros comentarios de los clientes
+          Nuestros clientes
             <span className="block font-serif italic">Que han dicho?</span>
           </h2>
         </div>

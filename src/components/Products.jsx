@@ -34,8 +34,8 @@ const Products = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-light">Cafe suave</h3>
-            <p className="text-gray-600">$18.00 USD</p>
+            <h3 className="text-2xl font-light">Cafe Colombia</h3>
+            <p className="text-gray-600">$8000</p>
           </div>
 
           {/* Producto 2 */}
@@ -47,8 +47,8 @@ const Products = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-light">Cafe Tostado</h3>
-            <p className="text-gray-600">$16.00 USD</p>
+            <h3 className="text-2xl font-light">Cafe Brasil</h3>
+            <p className="text-gray-600">$8000</p>
           </div>
 
           {/* Producto 3 */}
@@ -61,7 +61,7 @@ const Products = () => {
               />
             </div>
             <h3 className="text-2xl font-light">Cafetera Filtro</h3>
-            <p className="text-gray-600">$20.00 USD</p>
+            <p className="text-gray-600">$10500</p>
           </div>
         </div>
       </div>

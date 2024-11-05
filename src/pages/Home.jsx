@@ -5,6 +5,7 @@ import OurStory from '../components/OurStory';
 import Testimonials from '../components/Testimonials';
 import Newsletter from '../components/Newsletter';
 import Hero from '../components/Hero';
+import LocationsPreview from '../components/LocationsPreview';
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
     <main className="bg-[#F8F5F2]">
       <Hero/>
       <Products/>
-      <Locations/>
+      <LocationsPreview/>
       <OurStory/>
       <Testimonials/>
       <Newsletter/>

@@ -20,7 +20,7 @@ const Carrito = () => {
           onClick={() => setMenuAbierto(!menuAbierto)}
           className="p-3 bg-[#F8F5F2] rounded-full hover:bg-slate-300 transition"
         >
-          <img src={assets.menu_icon} alt="Menu" className="w-10 h-10" />
+          <img src={assets.menu_icon} alt="Menu" className="w-8 h-8" />
         </button>
 
         {menuAbierto && (

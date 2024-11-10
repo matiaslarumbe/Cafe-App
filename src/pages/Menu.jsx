@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Menu = () => {
-  const [menuAbierto, setMenuAbierto] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
     {
@@ -34,35 +34,51 @@ const Menu = () => {
   ];
 
   return (
-    <div className="pt-20 pb-20 px-4 bg-[#F8F5F2] min-h-screen">
-      {/* Botón de menú hamburguesa */}
+    <div className="pt-8 xs:pt-12 md:pt-24 pb-20 px-4 bg-[#F8F5F2] min-h-screen relative">
+      {/* Menú hamburguesa */}
       <div className="fixed top-4 right-4 z-50">
         <button
-          onClick={() => setMenuAbierto(!menuAbierto)}
-          className="p-3 bg-[#F8F5F2] rounded-full hover:bg-slate-300 transition"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="p-2  transition-all"
         >
-          <img src={assets.menu_icon} alt="Menu" className="w-10 h-10" />
+          <img 
+            src={assets.menu_icon} 
+            alt="Menu" 
+            className="w-8 h-8"
+          />
         </button>
 
-        {menuAbierto && (
-          <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-lg">
-            <div className="py-2">
-              <Link to="/" className="block px-4 py-2 hover:bg-gray-100">
-                Home
-              </Link>
-              <Link
-                to="/locations"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                Locations
-              </Link>
-              <Link to="/jobs" className="block px-4 py-2 hover:bg-gray-100">
-                Jobs
-              </Link>
-              <Link to="/carrito" className="block px-4 py-2 hover:bg-gray-100">
-                Tienda
-              </Link>
-            </div>
+        {/* Menú desplegable */}
+        {isMenuOpen && (
+          <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-xl shadow-lg overflow-hidden">
+            <Link 
+              to="/" 
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/locations" 
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Locations
+            </Link>
+            <Link 
+              to="/jobs" 
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Jobs
+            </Link>
+            <Link 
+              to="/carrito" 
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Carrito
+            </Link>
           </div>
         )}
       </div>
@@ -70,7 +86,7 @@ const Menu = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Imagen fija del lado izquierdo */}
-          <div className="lg:w-1/2 lg:sticky lg:top-20 lg:h-[calc(100vh-8rem)]">
+          <div className="lg:w-1/2 lg:sticky lg:top-32 lg:h-[calc(100vh-10rem)]">
             <div className="relative h-full">
               <img
                 src={assets.carta_de_menu_2}
@@ -86,11 +102,9 @@ const Menu = () => {
           </div>
 
           {/* Contenido del menú deslizable */}
-          <div
-            className="lg:w-1/2 lg:max-h-[calc(100vh-8rem)] lg:overflow-y-auto lg:sticky lg:top-20 
-    scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent hover:scrollbar-thumb-gray-400 
-    pr-4 scroll-smooth"
-          >
+          <div className="lg:w-1/2 lg:max-h-[calc(100vh-10rem)] lg:overflow-y-auto lg:sticky lg:top-32 
+            scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent hover:scrollbar-thumb-gray-400 
+            pr-4 scroll-smooth">
             {/* Encabezado */}
             <div className="text-center mb-16">
               <h2 className="text-5xl font-light mb-6">
@@ -102,14 +116,14 @@ const Menu = () => {
               </p>
             </div>
 
-            {/* Menú */}
+            {/* Lista de categorías y productos */}
             <div className="space-y-12">
               {menuItems.map((seccion, index) => (
                 <div key={index}>
                   <h2 className="text-3xl font-light mb-6 text-center">
                     {seccion.categoria}
                   </h2>
-                  <div className="bg-white rounded-3xl p-8">
+                  <div className="bg-white rounded-3xl p-8 shadow-md">
                     {seccion.items.map((item, itemIndex) => (
                       <div
                         key={itemIndex}

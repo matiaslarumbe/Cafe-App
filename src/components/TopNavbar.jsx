@@ -9,7 +9,7 @@ const TopNavbar = () => {
     <nav className="absolute top-8 left-0 right-0 z-40">
       <div className="container mx-auto px-4">
         {/* Versión desktop */}
-        <div className="hidden md:flex justify-between items-center max-w-[120vw] mx-auto bg-black bg-opacity-10 rounded-full py-1 px-10 border border-white border-opacity-70">
+        <div className="hidden md:flex justify-between items-center max-w-[120vw] mx-auto bg-black bg-opacity-10 rounded-full  px-8 border border-white border-opacity-70">
           {/* Enlaces izquierdos */}
           <div className="flex space-x-30 items-center">
             <Link to="/" className="text-white text-lg px-8 py-2 rounded-full hover:bg-white hover:bg-opacity-25 transition-all">

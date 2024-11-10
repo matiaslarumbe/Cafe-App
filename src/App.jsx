@@ -7,15 +7,21 @@ import Locations from './pages/Locations';
 import Jobs from './pages/Jobs';
 import Carrito from './pages/Carrito';
 import Navbar from './components/NavBar';
+import TopNavbar from './components/TopNavbar';
 
-// Componente wrapper para manejar la lógica del Navbar
+// Componente wrapper para manejar la lógica de los Navbars
 const AppContent = () => {
   const location = useLocation();
-  const showNavbar = !['menu', 'carrito'].includes(location.pathname.slice(1));
+  const currentPath = location.pathname.slice(1);
+  
+  // Lógica para mostrar los diferentes navbars
+  const showFloatingNavbar = !['menu', 'carrito'].includes(currentPath);
+  const showTopNavbar = ['carrito'].includes(currentPath);
 
   return (
     <>
-      {showNavbar && <Navbar />}
+      {showFloatingNavbar && <Navbar />}
+      {showTopNavbar && <TopNavbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
@@ -37,4 +43,3 @@ function App() {
 }
 
 export default App;
-// https://botanical.framer.website/

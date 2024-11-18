@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { assets } from "../assets/assets";
+import { motion } from "framer-motion";
 
 
 const Products = () => {
@@ -9,19 +10,41 @@ const Products = () => {
       <div className="container mx-auto">
         {/* Título de la sección */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-light mb-6">
-            Nuestras variedades de
-            <span className="block font-serif italic">Productos</span>
-          </h2>
-          <div className="text-center mt-12">
-            <Link
-              to="/carrito"
-              className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg hover:bg-opacity-90 transition-all"
-            >
-              Ver Más Productos
-            </Link>
-          </div>
-        </div>
+      <motion.h2 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="text-5xl md:text-6xl font-light mb-6"
+      >
+        Nuestras variedades de
+        <motion.span 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="block font-serif italic"
+        >
+          Productos
+        </motion.span>
+      </motion.h2>
+      
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="text-center mt-12"
+      >
+        <Link
+          to="/carrito"
+          className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg 
+            hover:bg-opacity-90 hover:scale-105 transition-all duration-300"
+        >
+          Ver Más Productos
+        </Link>
+      </motion.div>
+    </div>
 
         {/* Grid de productos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
